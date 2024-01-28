@@ -114,9 +114,6 @@ app.get('/search/:searchTerm', async (req: Request, res: Response) => {
   
       const results = await collection.find(finalQuery).toArray();
   
-
-    // const results = ""
-
     res.json(results);
   } catch (error) {
     console.error(error);
